@@ -2,7 +2,7 @@ import ballerina/http;
 import choreo/mediation;
 import choreo/mediation.add_header;
 
-configurable string ContentTypeHeaderValue = ?;
+string ContentTypeHeaderValue = "application/json";
 function handleRequestFlowPolicyResult(http:Response|false|() result, http:Caller caller) returns boolean {
     if result is false {
         http:ListenerError? response = caller->respond(new);

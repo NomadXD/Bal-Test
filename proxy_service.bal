@@ -34,8 +34,8 @@ service /aftersales/\1\.0\.0 on ep0 {
     }
 }
 
-configurable string Endpoint = "https://abctesrt.requestcatcher.com/test";
-configurable string SandboxEndpoint = "https://abctesrt.requestcatcher.com/test";
+string Endpoint = "https://abctesrt.requestcatcher.com/test";
+string SandboxEndpoint = "https://abctesrt.requestcatcher.com/test";
 
 final http:Client backendEP = check new (Endpoint, config = {
     // secureSocket: {
