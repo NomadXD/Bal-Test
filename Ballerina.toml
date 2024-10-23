@@ -1,6 +1,3 @@
-[build-options]
-  observabilityIncluded = true
-
 [package]
   distribution = "2201.5.5"
   name = "mediation_gbrstc"
