@@ -1,0 +1,9 @@
+[build-options]
+  observabilityIncluded = true
+
+[package]
+  distribution = "2201.5.5"
+  name = "mediation_gbrstc"
+  org = "raveen"
+  version = "0.1.0"
+
