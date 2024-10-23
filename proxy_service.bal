@@ -39,20 +39,20 @@ configurable string SandboxEndpoint = "https://abctesrt.requestcatcher.com/test"
 configurable map<string> AdvancedSettings = {};
 
 final http:Client backendEP = check new (Endpoint, config = {
-    secureSocket: {
-        enable: check boolean:fromString("true"),
-        cert: "/home/ballerina/ca.pem",
-        verifyHostName: AdvancedSettings.hasKey("verifyHostname") ? check boolean:fromString(AdvancedSettings.get("verifyHostname")) : true
-    },
+    // secureSocket: {
+    //     enable: check boolean:fromString("true"),
+    //     cert: "/home/ballerina/ca.pem",
+    //     verifyHostName: AdvancedSettings.hasKey("verifyHostname") ? check boolean:fromString(AdvancedSettings.get("verifyHostname")) : true
+    // },
     timeout: 300,
     httpVersion: AdvancedSettings.hasKey("httpVersion") ? <http:HttpVersion>(<anydata>AdvancedSettings.get("httpVersion")) : "2.0"
 });
 final http:Client sandboxEP = check new (SandboxEndpoint, config = {
-    secureSocket: {
-        enable: check boolean:fromString("false"),
-        cert: "/home/ballerina/sand_ca.pem",
-        verifyHostName: AdvancedSettings.hasKey("verifyHostname") ? check boolean:fromString(AdvancedSettings.get("verifyHostname")) : true
-    },
+    // secureSocket: {
+    //     enable: check boolean:fromString("false"),
+    //     cert: "/home/ballerina/sand_ca.pem",
+    //     verifyHostName: AdvancedSettings.hasKey("verifyHostname") ? check boolean:fromString(AdvancedSettings.get("verifyHostname")) : true
+    // },
     timeout: 300,
     httpVersion: AdvancedSettings.hasKey("httpVersion") ? <http:HttpVersion>(<anydata>AdvancedSettings.get("httpVersion")) : "2.0"
 });

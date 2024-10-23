@@ -1,1 +1,1 @@
-configurable string BasicAuthHeaderValue = ?;
+configurable string ContentTypeHeaderValue = ?;

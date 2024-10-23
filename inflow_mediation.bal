@@ -15,7 +15,7 @@ function handleRequestFlowPolicyResult(http:Response|false|() result, http:Calle
 
 function 'get__hub_tickets_RequestFlow(http:Caller caller, mediation:Context mediationCtx, http:Request request) returns boolean|error {
     {
-        var result = check add_header:addHeader_In(mediationCtx, request, "Authorization", BasicAuthHeaderValue);
+        var result = check add_header:addHeader_In(mediationCtx, request, "Content-Type", ContentTypeHeaderValue);
 
         if handleRequestFlowPolicyResult(result, caller) {
             return true;
