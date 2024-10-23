@@ -5,7 +5,7 @@ import ballerina/http;
 
 listener http:Listener ep0 = new (9090, timeout = 0);
 
-service /aftersales/\1\.0\.0 on ep0 {
+service /aftersales on ep0 {
     resource function get hub/tickets(http:Caller caller, http:Request request) returns error? {
         // map<mediation:PathParamValue> pathParams = {};
         // mediation:Context originalCtx = mediation:createImmutableMediationContext("get", ["hub", "tickets"], pathParams, request.getQueryParams());
