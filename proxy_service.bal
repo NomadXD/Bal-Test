@@ -34,8 +34,8 @@ service /aftersales on ep0 {
     }
 }
 
-configurable string Endpoint = "https://1456f846-f4f9-4e8f-bb99-a461df78c2d4-dev.e1-us-east-azure.choreoapis.dev/eyer/go-book-listing/v1.0/books";
-configurable string SandboxEndpoint = "https://1456f846-f4f9-4e8f-bb99-a461df78c2d4-dev.e1-us-east-azure.choreoapis.dev/eyer/go-book-listing/v1.0/books";
+configurable string Endpoint = "https://1456f846-f4f9-4e8f-bb99-a461df78c2d4-dev.e1-us-east-azure.choreoapis.dev/eyer/go-book-listing/v1.0";
+configurable string SandboxEndpoint = "https://1456f846-f4f9-4e8f-bb99-a461df78c2d4-dev.e1-us-east-azure.choreoapis.dev/eyer/go-book-listing/v1.0";
 configurable map<string> AdvancedSettings = {};
 
 final http:Client backendEP = check new (Endpoint, config = {
