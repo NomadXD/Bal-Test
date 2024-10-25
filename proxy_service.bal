@@ -8,8 +8,8 @@ listener http:Listener ep0 = new (9090, timeout = 0);
 service / on ep0 {
     resource function get books(http:Caller caller, http:Request request) returns error? {
         map<mediation:PathParamValue> pathParams = {};
-        mediation:Context originalCtx = mediation:createImmutableMediationContext("get", ["hub", "tickets"], pathParams, request.getQueryParams());
-        mediation:Context mediationCtx = mediation:createMutableMediationContext(originalCtx, ["hub", "tickets"], pathParams, request.getQueryParams());
+        mediation:Context originalCtx = mediation:createImmutableMediationContext("get", ["books"], pathParams, request.getQueryParams());
+        mediation:Context mediationCtx = mediation:createMutableMediationContext(originalCtx, ["books"], pathParams, request.getQueryParams());
         http:Response? backendResponse = ();
         removeHostHeader(request);
         do {
