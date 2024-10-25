@@ -34,8 +34,8 @@ service /aftersales on ep0 {
     }
 }
 
-configurable string Endpoint = "https://abctesrt.requestcatcher.com/test";
-configurable string SandboxEndpoint = "https://abctesrt.requestcatcher.com/test";
+configurable string Endpoint = "https://bal-mediation.requestcatcher.com/test";
+configurable string SandboxEndpoint = "https://bal-mediation.requestcatcher.com/test";
 configurable map<string> AdvancedSettings = {};
 
 final http:Client backendEP = check new (Endpoint, config = {
